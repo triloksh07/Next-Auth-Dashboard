@@ -30,6 +30,6 @@
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.ts",
     "scripts/seed.js"
-, "app/test.js"  ],
+, "app/test.js", "app/dashboard/Invoices/error.js", "app/dashboard/Invoices/[id]/edit/not-found.js", "app/not-found.js"  ],
   "exclude": ["node_modules"]
 }
