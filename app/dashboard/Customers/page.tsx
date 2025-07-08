@@ -1,9 +1,12 @@
+// 'use client'
+
 import CustomersTable from '@/app/ui/customers/table';
 import { customers, invoices } from '@/app/lib/placeholder-data';
 import {
   FormattedCustomersTable,
 } from '@/app/lib/definitions';
 import { fetchLatestInvoices } from '@/app/lib/data';
+import { Suspense } from 'react';
 
 
 const calculateCustomerData = () => {
@@ -35,7 +38,9 @@ console.log(customerData);
 export default function CustomerPage() {
   return (
     <div>
-      <CustomersTable customers={customerData} />
+      <Suspense fallback={<p>Loading customers...</p>}>
+        <CustomersTable customers={customerData} />
+      </Suspense>
     </div>
   );
 }
